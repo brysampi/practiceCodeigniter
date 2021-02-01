@@ -1,0 +1,131 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    min-width: 320;
+}
+.landing{
+    background-image: url("https://wp.eschoolapp.in/naps/wp-content/uploads/sites/126/2020/01/410119501Website-Design-Background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 5px 20px #888888;
+}
+.limiter{
+    width: 80%;
+    margin: auto;
+    min-width: 320;
+}
+.limiter__inside{
+    /* background-color: saddlebrown; */
+    height: 100vh;
+    padding: 150px 0 0 0;
+}
+.limiter__inside1{
+    background-color: green;
+    height: 100vh;
+}
+.limiter__inside2{
+    padding-top: 25vh;
+    /* background-color: yellow; */
+    height: 100vh;
+}
+.container-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.boxes{
+    height: 500px;
+    /* background-color: turquoise; */
+    margin: auto;
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+}
+.boxes__inside{
+    background-color: whitesmoke;
+    margin: auto;
+    /* margin-top: 50%; */
+    height: 90%;
+    width: 90%;
+    box-shadow: 0 5px 20px #888888;
+    padding: 10px;
+}
+.boxes__inside--image{
+    background-color: tomato;
+    height: 50%;
+    width: 90%;
+    margin: auto;
+    top:10px;
+}
+.boxes__inside--image img{
+    width: 100%;
+    height: 100%;
+}
+.boxes__inside:hover{
+    transform: scale(1.02);
+}
+.image_text{
+    max-height: 11.5em;
+    line-height: 1.2em;
+    /* text-align:justify; */
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+#map {
+    /* box-shadow: 0 5px 10px #888888; */
+    height: 400px;
+    /* width: 50%; */
+}
+.form {
+    box-shadow: 0 5px 20px #888888;
+    background-color: white;
+    height: 400px;
+    padding: 20px;
+}
+.form input,.form textarea{
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-row{
+        display: block;
+        flex-wrap: nowrap;
+    }
+    .boxes{
+        width: 80%;
+        /* background-color: tomato; */
+    }
+    .limiter__inside{
+        /* background-color: saddlebrown; */
+        height: auto;
+    }
+    .limiter__inside2{
+        padding: 0;
+    }
+    #map {
+        height: 50%;
+        width: 100%;
+    }
+    .form {
+        box-shadow: 0 5px 20px #888888;
+        background-color: white;
+        height: 300px;
+        padding: 20px;
+        width: 100%;
+    }
+}
+/* .container_one,.container_two,.container_three{
+    height: 1000px;
+    background-color: violet;
+} */
