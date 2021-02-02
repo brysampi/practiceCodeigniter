@@ -10,12 +10,17 @@ class Crud_test extends BaseController
     function index()
 	{
         $crudModel = new Model_test();
+        // die($crudModel->selectAll());
+        $test = $crudModel->selectAll();
 
-		$data['user_data'] = $crudModel->orderBy('id', 'DESC')->paginate(10);
 
-		$data['pagination_link'] = $crudModel->pager;
+        // die($test);
 
-		return view('pages/crud/Add', $data);
+		// $data['user_data'] = $crudModel->orderBy('id', 'DESC')->paginate(10);
+
+		// $data['pagination_link'] = $crudModel->pager;
+
+		return view('pages/crud/Add', $test);
 		
     }
     //add validation
