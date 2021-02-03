@@ -93,7 +93,7 @@
             $('#table').html(tbody);
 
             //function_name , 1s refresh/millisecond count
-            // setTimeout(fetch, 1000);
+            setTimeout(fetch, 1000);
         } 
     });
   }
@@ -138,15 +138,17 @@
 
   $(document).on("click", ".delete" ,function(){
       var id = $(this).data('id');
-      $.ajax({
-        url:"<?php echo base_url('public/ajax/delete_data'); ?>",
-        type:"post",
-        dataType:"json",
-        data:{id:id},
-        success: function(data){
-          console.log(data);
-        }
-      });
+      if(confirm('Are you sure you want to delete '+id+"?")){
+        $.ajax({
+          url:"<?php echo base_url('public/ajax/delete_data'); ?>",
+          type:"post",
+          dataType:"json",
+          data:{id:id},
+          success: function(data){
+            console.log(data);
+          }
+        });
+      }
   });
 </script>
 </body>

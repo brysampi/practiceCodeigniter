@@ -57,7 +57,7 @@ class Model_test extends Model{
         $builder->update();
     }
 
-    public function delete($id){
+    public function deletes($id){
         $db = \Config\Database::connect();
         $builder = $db->table('first');
         $builder->where('id', $id);

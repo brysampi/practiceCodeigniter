@@ -71,9 +71,9 @@ class Ajax extends BaseController
 	public function delete_data(){
 		helper(['form', 'url']);
 		$id = $this->request->getVar('id');
-		die($id);
 		$crudModel = new Model_test();
-		$data = $crudModel->delete($id);
+		$data = $crudModel->deletes($id);
+		return $data;
 	}
 	
 	
