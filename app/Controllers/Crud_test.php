@@ -11,7 +11,7 @@ class Crud_test extends BaseController
 	{
         $crudModel = new Model_test();
         // die($crudModel->selectAll());
-        $test = $crudModel->selectAll();
+        $user_data['user_data'] = $crudModel->selectAll();
 
 
         // die($test);
@@ -20,7 +20,7 @@ class Crud_test extends BaseController
 
 		// $data['pagination_link'] = $crudModel->pager;
 
-		return view('pages/crud/Add', $test);
+		return view('pages/crud/Add', $user_data);
 		
     }
     //add validation
@@ -44,7 +44,8 @@ class Crud_test extends BaseController
 
 			$crudModel->save([
 				'name'	=>	$this->request->getVar('name')
-			]);
+            ]);
+            // die(json_encode($crudModel));
 
 			$session = \Config\Services::session();
 
